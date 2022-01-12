@@ -1,16 +1,10 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using MovieApi.Services;
 using MovieApi.Models;
 using Microsoft.EntityFrameworkCore;
@@ -19,7 +13,6 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using MovieApi.Extensions;
 
 namespace MovieApi
 {
@@ -74,7 +67,6 @@ namespace MovieApi
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "MovieApi", Version = "v1" });
             });
-            //services.AddSingleton(typeof(MovieServiceInMemory));
             services.AddScoped<IMovieService, MovieService>();
             services.AddScoped<RatingService, RatingService>();
             services.AddScoped<CategoryService, CategoryService>();

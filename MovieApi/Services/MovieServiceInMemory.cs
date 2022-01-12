@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using MovieApi.Models;
 
 namespace MovieApi.Services
@@ -15,7 +14,8 @@ namespace MovieApi.Services
             {
                 Id = 1,
                 Name = "The Dark Tower",
-                Description = "A boy haunted by visions of a dark tower from a parallel reality teams up with the tower's disillusioned guardian to stop an evil warlock known as the Man in Black who plans to use the boy to destroy the tower and open the gates of Hell.",
+                Description = "A boy haunted by visions of a dark tower from a parallel reality teams up with the tower's disillusioned guardian " +
+                "to stop an evil warlock known as the Man in Black who plans to use the boy to destroy the tower and open the gates of Hell.",
                 Length = 95,
                 Year = 2017
             }

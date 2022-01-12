@@ -1,14 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using MovieApi.Models;
-using MovieApi.Services;
-using MovieApi.Dtos;
-using MovieApi.ViewModels;
-using Microsoft.Extensions.Logging;
-using MovieApi.Filters;
 using MovieApi.Dtos.Authentication;
 using Microsoft.AspNetCore.Identity;
 using MovieApi.Models.Authentication;

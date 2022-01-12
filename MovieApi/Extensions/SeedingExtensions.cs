@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using MovieApi.Models;
 using MovieApi.Models.Authentication;
 
 namespace MovieApi.Extensions
@@ -26,6 +22,7 @@ namespace MovieApi.Extensions
                 if (!roleManager.RoleExistsAsync(UserRoles.User).Result)
                     roleManager.CreateAsync(new IdentityRole(UserRoles.User)).Wait();
 
+                // Seed admin
                 var admin = new ApplicationUser
                 {
                     UserName = "admin",
@@ -46,7 +43,6 @@ namespace MovieApi.Extensions
                     userManager.AddToRolesAsync(admin, roles).Wait();
                 }
             }
-
             return host;
         }
     }

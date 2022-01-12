@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using MovieApi.Models;
 using Microsoft.EntityFrameworkCore;
-using System.Linq.Expressions;
 using MovieApi.ViewModels;
 using MovieApi.Dtos;
 using AutoMapper;
@@ -69,7 +67,6 @@ namespace MovieApi.Services
                 .ToListAsync();
         }
 
-        // error when trying to modify rating's movieId
         public async Task<bool> UpdateRating(int id, UpdateRatingDto r)
         {
             var _r = _mapper.Map<Rating>(r);

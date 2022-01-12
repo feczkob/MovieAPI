@@ -4,7 +4,6 @@ using Microsoft.EntityFrameworkCore;
 using MovieApi.Dtos;
 using MovieApi.Models;
 using MovieApi.ViewModels;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;

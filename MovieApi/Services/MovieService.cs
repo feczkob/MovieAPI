@@ -13,7 +13,6 @@ using MovieApi.Filters;
 
 namespace MovieApi.Services
 {
-
     public class MovieService : IMovieService
     {
 
@@ -99,9 +98,7 @@ namespace MovieApi.Services
                             Id = y.Id,
                             Name = y.Name
                         })
-                        //.ProjectTo<CategoryVm>(_mapper.ConfigurationProvider)
                         .ToList()})
-                //.ProjectTo<MovieVm>(_mapper.ConfigurationProvider)
                 .SingleOrDefaultAsync();
         }
 

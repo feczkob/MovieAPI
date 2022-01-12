@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace MovieApi.Models
 {
@@ -21,6 +19,5 @@ namespace MovieApi.Models
         public int Year { get; set; }
         public ICollection<Rating> Ratings { get; set; }
         public ICollection<CategoryMovie> CategoryMovies { get; set; }
-        //public virtual List<Category> Categories { get; set; }
     }
 }

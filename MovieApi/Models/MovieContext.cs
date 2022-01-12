@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using MovieApi.Models.Authentication;
 
@@ -36,9 +31,8 @@ namespace MovieApi.Models
                     .WithMany(c => c.CategoryMovies)
                     .HasForeignKey(cm => cm.CategoryId);
             });
-            //.HasKey(cm => new { cm.CategoryId, cm.MovieId });
 
-            // seed
+            // Seed
             modelBuilder.Entity<Movie>().HasData(
                 new Movie { Id = 1, Name = "The Dark Tower", 
                     Description = "A boy haunted by visions of a dark tower from a parallel reality teams up with the tower's disillusioned guardian to stop an evil warlock known as the Man in Black who plans to use the boy to destroy the tower and open the gates of Hell.",
