@@ -1,0 +1,530 @@
+2022-01-09 15:41:24.260 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-09 15:41:24.284 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44334/swagger - -
+2022-01-09 15:41:24.327 +01:00 [INF] Hosting environment: Development
+2022-01-09 15:41:24.327 +01:00 [INF] Content root path: C:\Users\Feczkó Botond\source\repos\MovieApi\MovieApi
+2022-01-09 15:41:24.427 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44334/swagger/index.html - -
+2022-01-09 15:41:24.438 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44334/swagger - - - 301 - - 163.3449ms
+2022-01-09 15:41:24.513 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44334/swagger/index.html - - - 200 - text/html;charset=utf-8 89.0498ms
+2022-01-09 15:41:24.534 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44334/swagger/swagger-ui.css - -
+2022-01-09 15:41:24.545 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44334/swagger/swagger-ui-standalone-preset.js - -
+2022-01-09 15:41:24.545 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44334/swagger/swagger-ui-bundle.js - -
+2022-01-09 15:41:24.597 +01:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2022-01-09 15:41:24.597 +01:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2022-01-09 15:41:24.597 +01:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2022-01-09 15:41:24.603 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44334/swagger/swagger-ui.css - - - 200 142933 text/css 68.2802ms
+2022-01-09 15:41:24.605 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44334/swagger/swagger-ui-standalone-preset.js - - - 200 311804 application/javascript 59.1118ms
+2022-01-09 15:41:24.615 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44334/swagger/swagger-ui-bundle.js - - - 200 986342 application/javascript 69.4798ms
+2022-01-09 15:41:24.754 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44334/swagger/v1/swagger.json - -
+2022-01-09 15:41:24.834 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44334/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 79.6684ms
+2022-01-09 15:41:31.890 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44334/api/Movie - -
+2022-01-09 15:41:31.918 +01:00 [INF] Executing endpoint 'MovieApi.Controllers.MovieController.GetAll (MovieApi)'
+2022-01-09 15:41:31.942 +01:00 [INF] Route matched with {action = "GetAll", controller = "Movie"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[MovieApi.Models.Movie]] GetAll() on controller MovieApi.Controllers.MovieController (MovieApi).
+2022-01-09 15:41:31.949 +01:00 [INF] Executed action MovieApi.Controllers.MovieController.GetAll (MovieApi) in 3.2935ms
+2022-01-09 15:41:31.950 +01:00 [INF] Executed endpoint 'MovieApi.Controllers.MovieController.GetAll (MovieApi)'
+2022-01-09 15:41:31.954 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'MovieApi.Services.MovieService' while attempting to activate 'MovieApi.Controllers.MovieController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method9(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-01-09 15:41:32.082 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44334/api/Movie - - - 500 - text/plain 191.4923ms
+2022-01-09 16:51:45.067 +01:00 [INF] Now listening on: https://localhost:5001
+2022-01-09 16:51:45.116 +01:00 [INF] Now listening on: http://localhost:5000
+2022-01-09 16:51:45.116 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-09 16:51:45.116 +01:00 [INF] Hosting environment: Development
+2022-01-09 16:51:45.116 +01:00 [INF] Content root path: C:\Users\Feczkó Botond\source\repos\MovieApi\MovieApi
+2022-01-09 16:51:46.121 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger - -
+2022-01-09 16:51:46.217 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger - - - 301 0 - 99.2921ms
+2022-01-09 16:51:46.227 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2022-01-09 16:51:46.286 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 58.8896ms
+2022-01-09 16:51:46.316 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - -
+2022-01-09 16:51:46.321 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - -
+2022-01-09 16:51:46.321 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui-bundle.js - -
+2022-01-09 16:51:46.384 +01:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2022-01-09 16:51:46.384 +01:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2022-01-09 16:51:46.397 +01:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2022-01-09 16:51:46.397 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - - - 200 142933 text/css 80.6733ms
+2022-01-09 16:51:46.397 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - - - 200 311804 application/javascript 76.2156ms
+2022-01-09 16:51:46.399 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui-bundle.js - - - 200 986342 application/javascript 77.8543ms
+2022-01-09 16:51:46.543 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2022-01-09 16:51:46.568 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/favicon-32x32.png - -
+2022-01-09 16:51:46.571 +01:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2022-01-09 16:51:46.575 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/favicon-32x32.png - - - 200 628 image/png 7.3535ms
+2022-01-09 16:51:46.626 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 83.5567ms
+2022-01-09 16:52:05.585 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Movie - -
+2022-01-09 16:52:05.617 +01:00 [INF] Executing endpoint 'MovieApi.Controllers.MovieController.GetAll (MovieApi)'
+2022-01-09 16:52:05.643 +01:00 [INF] Route matched with {action = "GetAll", controller = "Movie"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[MovieApi.Models.Movie]] GetAll() on controller MovieApi.Controllers.MovieController (MovieApi).
+2022-01-09 16:52:05.651 +01:00 [INF] Executed action MovieApi.Controllers.MovieController.GetAll (MovieApi) in 2.0541ms
+2022-01-09 16:52:05.653 +01:00 [INF] Executed endpoint 'MovieApi.Controllers.MovieController.GetAll (MovieApi)'
+2022-01-09 16:52:05.659 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'MovieApi.Services.MovieService' while attempting to activate 'MovieApi.Controllers.MovieController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method9(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-01-09 16:52:05.709 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Movie - - - 500 - text/plain 123.6466ms
+2022-01-09 16:54:41.648 +01:00 [INF] Now listening on: https://localhost:5001
+2022-01-09 16:54:41.692 +01:00 [INF] Now listening on: http://localhost:5000
+2022-01-09 16:54:41.693 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-09 16:54:41.693 +01:00 [INF] Hosting environment: Development
+2022-01-09 16:54:41.693 +01:00 [INF] Content root path: C:\Users\Feczkó Botond\source\repos\MovieApi\MovieApi
+2022-01-09 16:54:42.682 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2022-01-09 16:54:42.829 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 149.7758ms
+2022-01-09 16:54:43.079 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2022-01-09 16:54:43.160 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 80.8835ms
+2022-01-09 16:54:45.536 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Movie - -
+2022-01-09 16:54:45.566 +01:00 [INF] Executing endpoint 'MovieApi.Controllers.MovieController.GetAll (MovieApi)'
+2022-01-09 16:54:45.590 +01:00 [INF] Route matched with {action = "GetAll", controller = "Movie"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[MovieApi.Models.Movie]] GetAll() on controller MovieApi.Controllers.MovieController (MovieApi).
+2022-01-09 16:54:45.598 +01:00 [INF] Executed action MovieApi.Controllers.MovieController.GetAll (MovieApi) in 1.6371ms
+2022-01-09 16:54:45.600 +01:00 [INF] Executed endpoint 'MovieApi.Controllers.MovieController.GetAll (MovieApi)'
+2022-01-09 16:54:45.605 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'MovieApi.Services.MovieService' while attempting to activate 'MovieApi.Controllers.MovieController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method9(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-01-09 16:54:45.661 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Movie - - - 500 - text/plain 124.6892ms
+2022-01-09 16:57:24.600 +01:00 [INF] Now listening on: https://localhost:5001
+2022-01-09 16:57:24.661 +01:00 [INF] Now listening on: http://localhost:5000
+2022-01-09 16:57:24.662 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-09 16:57:24.662 +01:00 [INF] Hosting environment: Development
+2022-01-09 16:57:24.662 +01:00 [INF] Content root path: C:\Users\Feczkó Botond\source\repos\MovieApi\MovieApi
+2022-01-09 16:57:25.494 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2022-01-09 16:57:25.649 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 157.7377ms
+2022-01-09 16:57:25.832 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2022-01-09 16:57:25.907 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 75.1571ms
+2022-01-09 16:57:28.110 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Movie - -
+2022-01-09 16:57:28.145 +01:00 [INF] Executing endpoint 'MovieApi.Controllers.MovieController.GetAll (MovieApi)'
+2022-01-09 16:57:28.169 +01:00 [INF] Route matched with {action = "GetAll", controller = "Movie"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[MovieApi.Models.Movie]] GetAll() on controller MovieApi.Controllers.MovieController (MovieApi).
+2022-01-09 16:57:28.425 +01:00 [INF] GetAll called.
+2022-01-09 16:57:28.833 +01:00 [INF] Entity Framework Core 5.0.1 initialized 'MovieContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-01-09 16:57:29.633 +01:00 [INF] Executed DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Description], [m].[Length], [m].[Name], [m].[Year]
+FROM [Movies] AS [m]
+2022-01-09 16:57:29.664 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[MovieApi.Models.Movie, MovieApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-09 16:57:29.677 +01:00 [INF] Executed action MovieApi.Controllers.MovieController.GetAll (MovieApi) in 1502.2718ms
+2022-01-09 16:57:29.679 +01:00 [INF] Executed endpoint 'MovieApi.Controllers.MovieController.GetAll (MovieApi)'
+2022-01-09 16:57:29.685 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Movie - - - 200 - application/json;+charset=utf-8 1575.5866ms
+2022-01-09 16:59:11.754 +01:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/Movie application/json 303
+2022-01-09 16:59:11.757 +01:00 [INF] Executing endpoint 'MovieApi.Controllers.MovieController.Post (MovieApi)'
+2022-01-09 16:59:11.769 +01:00 [INF] Route matched with {action = "Post", controller = "Movie"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Post(MovieApi.Models.Movie) on controller MovieApi.Controllers.MovieController (MovieApi).
+2022-01-09 16:59:11.806 +01:00 [INF] Post called.
+2022-01-09 16:59:11.832 +01:00 [INF] Entity Framework Core 5.0.1 initialized 'MovieContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-01-09 16:59:11.993 +01:00 [INF] Executed DbCommand (21ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Int32), @p2='?' (Size = 250), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Movies] ([Description], [Length], [Name], [Year])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Movies]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2022-01-09 16:59:11.994 +01:00 [INF] Executing CreatedAtActionResult, writing value of type 'System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[[MovieApi.Models.Movie, MovieApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[MovieApi.Services.MovieService+<CreateMovie>d__2, MovieApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-09 16:59:12.049 +01:00 [INF] Executed action MovieApi.Controllers.MovieController.Post (MovieApi) in 278.0999ms
+2022-01-09 16:59:12.051 +01:00 [INF] Executed endpoint 'MovieApi.Controllers.MovieController.Post (MovieApi)'
+2022-01-09 16:59:12.055 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Text.Json.JsonException: A possible object cycle was detected. This can either be due to a cycle or if the object depth is larger than the maximum allowed depth of 32. Consider using ReferenceHandler.Preserve on JsonSerializerOptions to support cycles.
+   at System.Text.Json.ThrowHelper.ThrowJsonException_SerializerCycleDetected(Int32 maxDepth)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWriteAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWriteAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWriteAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWriteAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWriteAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWriteAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWriteAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWriteAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWriteAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWriteAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWriteAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWriteAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWriteAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWriteAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWriteAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonPropertyInfo`1.GetMemberAndWriteJson(Object obj, WriteStack& state, Utf8JsonWriter writer)
+   at System.Text.Json.Serialization.Converters.ObjectDefaultConverter`1.OnTryWrite(Utf8JsonWriter writer, T value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.TryWrite(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCore(Utf8JsonWriter writer, T& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.Serialization.JsonConverter`1.WriteCoreAsObject(Utf8JsonWriter writer, Object value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteCore[TValue](JsonConverter jsonConverter, Utf8JsonWriter writer, TValue& value, JsonSerializerOptions options, WriteStack& state)
+   at System.Text.Json.JsonSerializer.WriteAsyncCore[TValue](Stream utf8Json, TValue value, Type inputType, JsonSerializerOptions options, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-01-09 16:59:12.147 +01:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/Movie application/json 303 - 500 - text/plain 393.0990ms
+2022-01-09 17:04:47.373 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Movie - -
+2022-01-09 17:04:47.375 +01:00 [INF] Executing endpoint 'MovieApi.Controllers.MovieController.GetAll (MovieApi)'
+2022-01-09 17:04:47.376 +01:00 [INF] Route matched with {action = "GetAll", controller = "Movie"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[MovieApi.Models.Movie]] GetAll() on controller MovieApi.Controllers.MovieController (MovieApi).
+2022-01-09 17:04:47.379 +01:00 [INF] GetAll called.
+2022-01-09 17:04:47.389 +01:00 [INF] Entity Framework Core 5.0.1 initialized 'MovieContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-01-09 17:04:47.406 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Description], [m].[Length], [m].[Name], [m].[Year]
+FROM [Movies] AS [m]
+2022-01-09 17:04:47.412 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[MovieApi.Models.Movie, MovieApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-09 17:04:47.415 +01:00 [INF] Executed action MovieApi.Controllers.MovieController.GetAll (MovieApi) in 37.0174ms
+2022-01-09 17:04:47.417 +01:00 [INF] Executed endpoint 'MovieApi.Controllers.MovieController.GetAll (MovieApi)'
+2022-01-09 17:04:47.418 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Movie - - - 200 - application/json;+charset=utf-8 45.5741ms
+2022-01-09 17:58:53.849 +01:00 [INF] Now listening on: https://localhost:5001
+2022-01-09 17:58:53.881 +01:00 [INF] Now listening on: http://localhost:5000
+2022-01-09 17:58:53.881 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-09 17:58:53.881 +01:00 [INF] Hosting environment: Development
+2022-01-09 17:58:53.882 +01:00 [INF] Content root path: C:\Users\Feczkó Botond\source\repos\MovieApi\MovieApi
+2022-01-09 17:58:54.923 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2022-01-09 17:58:55.069 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 148.6734ms
+2022-01-09 17:58:55.261 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2022-01-09 17:58:55.342 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 80.0941ms
+2022-01-09 17:59:59.766 +01:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/Movie application/json 272
+2022-01-09 17:59:59.793 +01:00 [INF] Executing endpoint 'MovieApi.Controllers.MovieController.Post (MovieApi)'
+2022-01-09 17:59:59.820 +01:00 [INF] Route matched with {action = "Post", controller = "Movie"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(MovieApi.Dtos.NewMovieDto) on controller MovieApi.Controllers.MovieController (MovieApi).
+2022-01-09 18:00:00.015 +01:00 [INF] Post called.
+2022-01-09 18:00:00.129 +01:00 [INF] Executed action MovieApi.Controllers.MovieController.Post (MovieApi) in 301.3224ms
+2022-01-09 18:00:00.132 +01:00 [INF] Executed endpoint 'MovieApi.Controllers.MovieController.Post (MovieApi)'
+2022-01-09 18:00:00.136 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Object -> Movie
+System.Object -> MovieApi.Models.Movie
+   at lambda_method11(Closure , Object , Movie , ResolutionContext )
+   at MovieApi.Services.MovieService.CreateMovie(NewMovieDto m) in C:\Users\Feczkó Botond\source\repos\MovieApi\MovieApi\Services\MovieService.cs:line 30
+   at MovieApi.Controllers.MovieController.Post(NewMovieDto m) in C:\Users\Feczkó Botond\source\repos\MovieApi\MovieApi\Controllers\MovieController.cs:line 31
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-01-09 18:00:00.230 +01:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/Movie application/json 272 - 500 - text/plain 464.7641ms
+2022-01-09 18:07:12.797 +01:00 [INF] Now listening on: https://localhost:5001
+2022-01-09 18:07:12.832 +01:00 [INF] Now listening on: http://localhost:5000
+2022-01-09 18:07:12.833 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-09 18:07:12.833 +01:00 [INF] Hosting environment: Development
+2022-01-09 18:07:12.833 +01:00 [INF] Content root path: C:\Users\Feczkó Botond\source\repos\MovieApi\MovieApi
+2022-01-09 18:07:14.025 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2022-01-09 18:07:14.166 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 145.2008ms
+2022-01-09 18:07:14.347 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2022-01-09 18:07:14.426 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 79.0317ms
+2022-01-09 18:07:24.547 +01:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/Movie application/json 64
+2022-01-09 18:07:24.576 +01:00 [INF] Executing endpoint 'MovieApi.Controllers.MovieController.Post (MovieApi)'
+2022-01-09 18:07:24.604 +01:00 [INF] Route matched with {action = "Post", controller = "Movie"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(MovieApi.Dtos.NewMovieDto) on controller MovieApi.Controllers.MovieController (MovieApi).
+2022-01-09 18:07:24.873 +01:00 [INF] Post called.
+2022-01-09 18:07:25.258 +01:00 [INF] Entity Framework Core 5.0.1 initialized 'MovieContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-01-09 18:07:25.774 +01:00 [INF] Executed DbCommand (42ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Int32), @p2='?' (Size = 250), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Movies] ([Description], [Length], [Name], [Year])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Movies]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2022-01-09 18:07:25.845 +01:00 [INF] Executing CreatedAtActionResult, writing value of type 'MovieApi.ViewModels.MovieVm'.
+2022-01-09 18:07:25.892 +01:00 [INF] Executed action MovieApi.Controllers.MovieController.Post (MovieApi) in 1281.1879ms
+2022-01-09 18:07:25.895 +01:00 [INF] Executed endpoint 'MovieApi.Controllers.MovieController.Post (MovieApi)'
+2022-01-09 18:07:25.900 +01:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/Movie application/json 64 - 201 - application/json;+charset=utf-8 1352.9919ms
+2022-01-09 18:07:35.153 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Movie - -
+2022-01-09 18:07:35.159 +01:00 [INF] Executing endpoint 'MovieApi.Controllers.MovieController.GetAll (MovieApi)'
+2022-01-09 18:07:35.162 +01:00 [INF] Route matched with {action = "GetAll", controller = "Movie"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[MovieApi.ViewModels.MovieRowVm]] GetAll() on controller MovieApi.Controllers.MovieController (MovieApi).
+2022-01-09 18:07:35.166 +01:00 [INF] GetAll called.
+2022-01-09 18:07:35.190 +01:00 [INF] Entity Framework Core 5.0.1 initialized 'MovieContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-01-09 18:07:35.400 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Length], [m].[Name], [m].[Year]
+FROM [Movies] AS [m]
+2022-01-09 18:07:35.413 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[MovieApi.ViewModels.MovieRowVm, MovieApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-09 18:07:35.418 +01:00 [INF] Executed action MovieApi.Controllers.MovieController.GetAll (MovieApi) in 254.1304ms
+2022-01-09 18:07:35.421 +01:00 [INF] Executed endpoint 'MovieApi.Controllers.MovieController.GetAll (MovieApi)'
+2022-01-09 18:07:35.423 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Movie - - - 200 - application/json;+charset=utf-8 269.7198ms
+2022-01-09 18:07:41.141 +01:00 [INF] Request starting HTTP/2 DELETE https://localhost:5001/api/Movie/2 - -
+2022-01-09 18:07:41.143 +01:00 [INF] Executing endpoint 'MovieApi.Controllers.MovieController.Delete (MovieApi)'
+2022-01-09 18:07:41.148 +01:00 [INF] Route matched with {action = "Delete", controller = "Movie"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller MovieApi.Controllers.MovieController (MovieApi).
+2022-01-09 18:07:41.154 +01:00 [INF] Delete called.
+2022-01-09 18:07:41.162 +01:00 [INF] Entity Framework Core 5.0.1 initialized 'MovieContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-01-09 18:07:41.224 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[Id], [m].[Description], [m].[Length], [m].[Name], [m].[Year]
+FROM [Movies] AS [m]
+WHERE [m].[Id] = @__p_0
+2022-01-09 18:07:41.434 +01:00 [INF] Executed DbCommand (197ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Movies]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+2022-01-09 18:07:41.444 +01:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 204
+2022-01-09 18:07:41.445 +01:00 [INF] Executed action MovieApi.Controllers.MovieController.Delete (MovieApi) in 294.8214ms
+2022-01-09 18:07:41.447 +01:00 [INF] Executed endpoint 'MovieApi.Controllers.MovieController.Delete (MovieApi)'
+2022-01-09 18:07:41.449 +01:00 [INF] Request finished HTTP/2 DELETE https://localhost:5001/api/Movie/2 - - - 204 - - 308.1239ms
+2022-01-09 18:07:53.146 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Movie - -
+2022-01-09 18:07:53.149 +01:00 [INF] Executing endpoint 'MovieApi.Controllers.MovieController.GetAll (MovieApi)'
+2022-01-09 18:07:53.150 +01:00 [INF] Route matched with {action = "GetAll", controller = "Movie"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[MovieApi.ViewModels.MovieRowVm]] GetAll() on controller MovieApi.Controllers.MovieController (MovieApi).
+2022-01-09 18:07:53.155 +01:00 [INF] GetAll called.
+2022-01-09 18:07:53.156 +01:00 [INF] Entity Framework Core 5.0.1 initialized 'MovieContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-01-09 18:07:53.161 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Length], [m].[Name], [m].[Year]
+FROM [Movies] AS [m]
+2022-01-09 18:07:53.164 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[MovieApi.ViewModels.MovieRowVm, MovieApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-09 18:07:53.169 +01:00 [INF] Executed action MovieApi.Controllers.MovieController.GetAll (MovieApi) in 14.0234ms
+2022-01-09 18:07:53.171 +01:00 [INF] Executed endpoint 'MovieApi.Controllers.MovieController.GetAll (MovieApi)'
+2022-01-09 18:07:53.172 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Movie - - - 200 - application/json;+charset=utf-8 26.7922ms
+2022-01-09 18:23:35.156 +01:00 [INF] Now listening on: https://localhost:5001
+2022-01-09 18:23:35.188 +01:00 [INF] Now listening on: http://localhost:5000
+2022-01-09 18:23:35.188 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-09 18:23:35.188 +01:00 [INF] Hosting environment: Development
+2022-01-09 18:23:35.188 +01:00 [INF] Content root path: C:\Users\Feczkó Botond\source\repos\MovieApi\MovieApi
+2022-01-09 18:23:36.302 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2022-01-09 18:23:36.436 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 137.0727ms
+2022-01-09 18:23:36.606 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2022-01-09 18:23:36.678 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 72.3811ms
+2022-01-09 18:23:47.714 +01:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/Movie application/json 64
+2022-01-09 18:23:47.745 +01:00 [INF] Executing endpoint 'MovieApi.Controllers.MovieController.Post (MovieApi)'
+2022-01-09 18:23:47.774 +01:00 [INF] Route matched with {action = "Post", controller = "Movie"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(MovieApi.Dtos.NewMovieDto) on controller MovieApi.Controllers.MovieController (MovieApi).
+2022-01-09 18:23:48.035 +01:00 [INF] Post called.
+2022-01-09 18:23:48.434 +01:00 [INF] Entity Framework Core 5.0.1 initialized 'MovieContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-01-09 18:23:48.935 +01:00 [INF] Executed DbCommand (39ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = Int32), @p2='?' (Size = 250), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Movies] ([Description], [Length], [Name], [Year])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Movies]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2022-01-09 18:23:49.006 +01:00 [INF] Executing CreatedAtActionResult, writing value of type 'MovieApi.ViewModels.MovieVm'.
+2022-01-09 18:23:49.054 +01:00 [INF] Executed action MovieApi.Controllers.MovieController.Post (MovieApi) in 1272.9832ms
+2022-01-09 18:23:49.059 +01:00 [INF] Executed endpoint 'MovieApi.Controllers.MovieController.Post (MovieApi)'
+2022-01-09 18:23:49.065 +01:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/Movie application/json 64 - 201 - application/json;+charset=utf-8 1351.1474ms
+2022-01-09 18:24:05.179 +01:00 [INF] Request starting HTTP/2 PUT https://localhost:5001/api/Movie/3 application/json 64
+2022-01-09 18:24:05.182 +01:00 [INF] Executing endpoint 'MovieApi.Controllers.MovieController.Put (MovieApi)'
+2022-01-09 18:24:05.189 +01:00 [INF] Route matched with {action = "Put", controller = "Movie"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Put(Int32, MovieApi.Dtos.UpdateMovieDto) on controller MovieApi.Controllers.MovieController (MovieApi).
+2022-01-09 18:24:05.197 +01:00 [INF] Put called.
+2022-01-09 18:24:05.225 +01:00 [INF] Entity Framework Core 5.0.1 initialized 'MovieContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-01-09 18:24:05.236 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@p4='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (DbType = Int32), @p2='?' (Size = 250), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Movies] SET [Description] = @p0, [Length] = @p1, [Name] = @p2, [Year] = @p3
+WHERE [Id] = @p4;
+SELECT @@ROWCOUNT;
+2022-01-09 18:24:05.246 +01:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 204
+2022-01-09 18:24:05.247 +01:00 [INF] Executed action MovieApi.Controllers.MovieController.Put (MovieApi) in 55.7018ms
+2022-01-09 18:24:05.249 +01:00 [INF] Executed endpoint 'MovieApi.Controllers.MovieController.Put (MovieApi)'
+2022-01-09 18:24:05.252 +01:00 [INF] Request finished HTTP/2 PUT https://localhost:5001/api/Movie/3 application/json 64 - 204 - - 73.6094ms
+2022-01-09 18:24:12.320 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Movie - -
+2022-01-09 18:24:12.326 +01:00 [INF] Executing endpoint 'MovieApi.Controllers.MovieController.GetAll (MovieApi)'
+2022-01-09 18:24:12.329 +01:00 [INF] Route matched with {action = "GetAll", controller = "Movie"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[MovieApi.ViewModels.MovieRowVm]] GetAll() on controller MovieApi.Controllers.MovieController (MovieApi).
+2022-01-09 18:24:12.333 +01:00 [INF] GetAll called.
+2022-01-09 18:24:12.341 +01:00 [INF] Entity Framework Core 5.0.1 initialized 'MovieContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-01-09 18:24:12.533 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Length], [m].[Name], [m].[Year]
+FROM [Movies] AS [m]
+2022-01-09 18:24:12.547 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[MovieApi.ViewModels.MovieRowVm, MovieApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-09 18:24:12.551 +01:00 [INF] Executed action MovieApi.Controllers.MovieController.GetAll (MovieApi) in 220.0956ms
+2022-01-09 18:24:12.553 +01:00 [INF] Executed endpoint 'MovieApi.Controllers.MovieController.GetAll (MovieApi)'
+2022-01-09 18:24:12.554 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Movie - - - 200 - application/json;+charset=utf-8 234.2216ms
+2022-01-09 18:24:21.653 +01:00 [INF] Application is shutting down...
+2022-01-09 18:33:30.004 +01:00 [INF] Now listening on: https://localhost:5001
+2022-01-09 18:33:30.042 +01:00 [INF] Now listening on: http://localhost:5000
+2022-01-09 18:33:30.043 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-09 18:33:30.043 +01:00 [INF] Hosting environment: Development
+2022-01-09 18:33:30.043 +01:00 [INF] Content root path: C:\Users\Feczkó Botond\source\repos\MovieApi\MovieApi
+2022-01-09 18:33:31.156 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2022-01-09 18:33:31.285 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 131.8115ms
+2022-01-09 18:33:31.466 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2022-01-09 18:33:31.541 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 75.2807ms
+2022-01-09 18:33:34.285 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Movie - -
+2022-01-09 18:33:34.316 +01:00 [INF] Executing endpoint 'MovieApi.Controllers.MovieController.GetAll (MovieApi)'
+2022-01-09 18:33:34.336 +01:00 [INF] Route matched with {action = "GetAll", controller = "Movie"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[MovieApi.ViewModels.MovieRowVm]] GetAll() on controller MovieApi.Controllers.MovieController (MovieApi).
+2022-01-09 18:33:34.582 +01:00 [INF] GetAll called.
+2022-01-09 18:33:34.947 +01:00 [INF] Entity Framework Core 5.0.1 initialized 'MovieContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-01-09 18:33:35.473 +01:00 [INF] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Length], [m].[Name], [m].[Year]
+FROM [Movies] AS [m]
+2022-01-09 18:33:35.508 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[MovieApi.ViewModels.MovieRowVm, MovieApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-09 18:33:35.527 +01:00 [INF] Executed action MovieApi.Controllers.MovieController.GetAll (MovieApi) in 1184.0167ms
+2022-01-09 18:33:35.529 +01:00 [INF] Executed endpoint 'MovieApi.Controllers.MovieController.GetAll (MovieApi)'
+2022-01-09 18:33:35.535 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Movie - - - 200 - application/json;+charset=utf-8 1250.1387ms
+2022-01-09 18:33:40.795 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Movie/3 - -
+2022-01-09 18:33:40.799 +01:00 [INF] Executing endpoint 'MovieApi.Controllers.MovieController.Get (MovieApi)'
+2022-01-09 18:33:40.809 +01:00 [INF] Route matched with {action = "Get", controller = "Movie"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller MovieApi.Controllers.MovieController (MovieApi).
+2022-01-09 18:33:40.822 +01:00 [INF] Get called.
+2022-01-09 18:33:40.846 +01:00 [INF] Entity Framework Core 5.0.1 initialized 'MovieContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-01-09 18:33:40.902 +01:00 [INF] Executed DbCommand (23ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [m].[Description], [m].[Id], [m].[Length], [m].[Name], [m].[Year]
+FROM [Movies] AS [m]
+WHERE [m].[Id] = @__id_0
+2022-01-09 18:33:40.912 +01:00 [INF] Executing OkObjectResult, writing value of type 'MovieApi.ViewModels.MovieVm'.
+2022-01-09 18:33:40.916 +01:00 [INF] Executed action MovieApi.Controllers.MovieController.Get (MovieApi) in 103.7452ms
+2022-01-09 18:33:40.924 +01:00 [INF] Executed endpoint 'MovieApi.Controllers.MovieController.Get (MovieApi)'
+2022-01-09 18:33:40.929 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Movie/3 - - - 200 - application/json;+charset=utf-8 134.2590ms
+2022-01-09 18:33:43.301 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Movie/1 - -
+2022-01-09 18:33:43.303 +01:00 [INF] Executing endpoint 'MovieApi.Controllers.MovieController.Get (MovieApi)'
+2022-01-09 18:33:43.305 +01:00 [INF] Route matched with {action = "Get", controller = "Movie"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller MovieApi.Controllers.MovieController (MovieApi).
+2022-01-09 18:33:43.311 +01:00 [INF] Get called.
+2022-01-09 18:33:43.318 +01:00 [INF] Entity Framework Core 5.0.1 initialized 'MovieContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-01-09 18:33:43.326 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [m].[Description], [m].[Id], [m].[Length], [m].[Name], [m].[Year]
+FROM [Movies] AS [m]
+WHERE [m].[Id] = @__id_0
+2022-01-09 18:33:43.331 +01:00 [INF] Executing OkObjectResult, writing value of type 'MovieApi.ViewModels.MovieVm'.
+2022-01-09 18:33:43.333 +01:00 [INF] Executed action MovieApi.Controllers.MovieController.Get (MovieApi) in 24.0306ms
+2022-01-09 18:33:43.334 +01:00 [INF] Executed endpoint 'MovieApi.Controllers.MovieController.Get (MovieApi)'
+2022-01-09 18:33:43.336 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Movie/1 - - - 200 - application/json;+charset=utf-8 35.3175ms
+2022-01-09 18:33:46.190 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Movie/2 - -
+2022-01-09 18:33:46.193 +01:00 [INF] Executing endpoint 'MovieApi.Controllers.MovieController.Get (MovieApi)'
+2022-01-09 18:33:46.194 +01:00 [INF] Route matched with {action = "Get", controller = "Movie"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller MovieApi.Controllers.MovieController (MovieApi).
+2022-01-09 18:33:46.197 +01:00 [INF] Get called.
+2022-01-09 18:33:46.198 +01:00 [INF] Entity Framework Core 5.0.1 initialized 'MovieContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-01-09 18:33:46.203 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [m].[Description], [m].[Id], [m].[Length], [m].[Name], [m].[Year]
+FROM [Movies] AS [m]
+WHERE [m].[Id] = @__id_0
+2022-01-09 18:33:46.207 +01:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2022-01-09 18:33:46.213 +01:00 [INF] Executed action MovieApi.Controllers.MovieController.Get (MovieApi) in 16.2764ms
+2022-01-09 18:33:46.217 +01:00 [INF] Executed endpoint 'MovieApi.Controllers.MovieController.Get (MovieApi)'
+2022-01-09 18:33:46.220 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Movie/2 - - - 404 - application/problem+json;+charset=utf-8 30.0378ms

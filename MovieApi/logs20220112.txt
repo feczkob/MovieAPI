@@ -1,0 +1,537 @@
+2022-01-12 00:03:22.247 +01:00 [INF] Now listening on: https://localhost:5001
+2022-01-12 00:03:22.283 +01:00 [INF] Now listening on: http://localhost:5000
+2022-01-12 00:03:22.283 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-12 00:03:22.283 +01:00 [INF] Hosting environment: Development
+2022-01-12 00:03:22.283 +01:00 [INF] Content root path: C:\Users\Feczkó Botond\source\repos\MovieApi\MovieApi
+2022-01-12 00:03:23.355 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2022-01-12 00:03:23.509 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 157.0421ms
+2022-01-12 00:03:23.745 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2022-01-12 00:03:23.842 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 97.4671ms
+2022-01-12 00:03:27.663 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Category - -
+2022-01-12 00:03:27.694 +01:00 [INF] Executing endpoint 'MovieApi.Controllers.CategoryController.GetAll (MovieApi)'
+2022-01-12 00:03:27.715 +01:00 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[MovieApi.ViewModels.CategoryVm]] GetAll() on controller MovieApi.Controllers.CategoryController (MovieApi).
+2022-01-12 00:03:27.979 +01:00 [INF] Category GetAll called.
+2022-01-12 00:03:28.534 +01:00 [INF] Entity Framework Core 5.0.1 initialized 'MovieContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-01-12 00:03:29.058 +01:00 [INF] Executed DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Category] AS [c]
+2022-01-12 00:03:29.092 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[MovieApi.ViewModels.CategoryVm, MovieApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-12 00:03:29.107 +01:00 [INF] Executed action MovieApi.Controllers.CategoryController.GetAll (MovieApi) in 1385.2814ms
+2022-01-12 00:03:29.109 +01:00 [INF] Executed endpoint 'MovieApi.Controllers.CategoryController.GetAll (MovieApi)'
+2022-01-12 00:03:29.114 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Category - - - 200 - application/json;+charset=utf-8 1451.6555ms
+2022-01-12 00:03:45.484 +01:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/Category application/json 18
+2022-01-12 00:03:45.489 +01:00 [INF] Executing endpoint 'MovieApi.Controllers.CategoryController.Post (MovieApi)'
+2022-01-12 00:03:45.500 +01:00 [INF] Route matched with {action = "Post", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(MovieApi.Dtos.NewCategoryDto) on controller MovieApi.Controllers.CategoryController (MovieApi).
+2022-01-12 00:03:45.516 +01:00 [INF] Category Post called.
+2022-01-12 00:03:45.550 +01:00 [INF] Entity Framework Core 5.0.1 initialized 'MovieContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-01-12 00:03:45.696 +01:00 [INF] Executed DbCommand (19ms) [Parameters=[@p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Category] ([Name])
+VALUES (@p0);
+SELECT [Id]
+FROM [Category]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2022-01-12 00:03:45.736 +01:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2022-01-12 00:03:45.738 +01:00 [INF] Executed action MovieApi.Controllers.CategoryController.Post (MovieApi) in 235.4854ms
+2022-01-12 00:03:45.740 +01:00 [INF] Executed endpoint 'MovieApi.Controllers.CategoryController.Post (MovieApi)'
+2022-01-12 00:03:45.741 +01:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/Category application/json 18 - 200 0 - 257.6337ms
+2022-01-12 00:03:49.622 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Category - -
+2022-01-12 00:03:49.626 +01:00 [INF] Executing endpoint 'MovieApi.Controllers.CategoryController.GetAll (MovieApi)'
+2022-01-12 00:03:49.627 +01:00 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[MovieApi.ViewModels.CategoryVm]] GetAll() on controller MovieApi.Controllers.CategoryController (MovieApi).
+2022-01-12 00:03:49.630 +01:00 [INF] Category GetAll called.
+2022-01-12 00:03:49.638 +01:00 [INF] Entity Framework Core 5.0.1 initialized 'MovieContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-01-12 00:03:49.643 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Category] AS [c]
+2022-01-12 00:03:49.646 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[MovieApi.ViewModels.CategoryVm, MovieApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-12 00:03:49.650 +01:00 [INF] Executed action MovieApi.Controllers.CategoryController.GetAll (MovieApi) in 21.2041ms
+2022-01-12 00:03:49.651 +01:00 [INF] Executed endpoint 'MovieApi.Controllers.CategoryController.GetAll (MovieApi)'
+2022-01-12 00:03:49.653 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Category - - - 200 - application/json;+charset=utf-8 31.2230ms
+2022-01-12 00:04:00.607 +01:00 [INF] Request starting HTTP/2 DELETE https://localhost:5001/api/Category/8 - -
+2022-01-12 00:04:00.609 +01:00 [INF] Executing endpoint 'MovieApi.Controllers.CategoryController.Delete (MovieApi)'
+2022-01-12 00:04:00.614 +01:00 [INF] Route matched with {action = "Delete", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32) on controller MovieApi.Controllers.CategoryController (MovieApi).
+2022-01-12 00:04:00.618 +01:00 [INF] Category Delete called.
+2022-01-12 00:04:00.620 +01:00 [INF] Entity Framework Core 5.0.1 initialized 'MovieContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-01-12 00:04:00.672 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Name]
+FROM [Category] AS [c]
+WHERE [c].[Id] = @__p_0
+2022-01-12 00:04:00.689 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Category]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+2022-01-12 00:04:00.696 +01:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 204
+2022-01-12 00:04:00.697 +01:00 [INF] Executed action MovieApi.Controllers.CategoryController.Delete (MovieApi) in 80.9655ms
+2022-01-12 00:04:00.698 +01:00 [INF] Executed endpoint 'MovieApi.Controllers.CategoryController.Delete (MovieApi)'
+2022-01-12 00:04:00.700 +01:00 [INF] Request finished HTTP/2 DELETE https://localhost:5001/api/Category/8 - - - 204 - - 93.0149ms
+2022-01-12 00:04:03.964 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Category - -
+2022-01-12 00:04:03.968 +01:00 [INF] Executing endpoint 'MovieApi.Controllers.CategoryController.GetAll (MovieApi)'
+2022-01-12 00:04:03.969 +01:00 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[MovieApi.ViewModels.CategoryVm]] GetAll() on controller MovieApi.Controllers.CategoryController (MovieApi).
+2022-01-12 00:04:03.973 +01:00 [INF] Category GetAll called.
+2022-01-12 00:04:03.974 +01:00 [INF] Entity Framework Core 5.0.1 initialized 'MovieContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-01-12 00:04:03.978 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Category] AS [c]
+2022-01-12 00:04:03.980 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[MovieApi.ViewModels.CategoryVm, MovieApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-12 00:04:03.987 +01:00 [INF] Executed action MovieApi.Controllers.CategoryController.GetAll (MovieApi) in 14.4256ms
+2022-01-12 00:04:03.989 +01:00 [INF] Executed endpoint 'MovieApi.Controllers.CategoryController.GetAll (MovieApi)'
+2022-01-12 00:04:03.991 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Category - - - 200 - application/json;+charset=utf-8 26.9716ms
+2022-01-12 00:04:08.006 +01:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/Category application/json 18
+2022-01-12 00:04:08.009 +01:00 [INF] Executing endpoint 'MovieApi.Controllers.CategoryController.Post (MovieApi)'
+2022-01-12 00:04:08.010 +01:00 [INF] Route matched with {action = "Post", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(MovieApi.Dtos.NewCategoryDto) on controller MovieApi.Controllers.CategoryController (MovieApi).
+2022-01-12 00:04:08.013 +01:00 [INF] Category Post called.
+2022-01-12 00:04:08.014 +01:00 [INF] Entity Framework Core 5.0.1 initialized 'MovieContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-01-12 00:04:08.019 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Category] ([Name])
+VALUES (@p0);
+SELECT [Id]
+FROM [Category]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2022-01-12 00:04:08.023 +01:00 [INF] Executing HttpStatusCodeResult, setting HTTP status code 200
+2022-01-12 00:04:08.025 +01:00 [INF] Executed action MovieApi.Controllers.CategoryController.Post (MovieApi) in 12.5059ms
+2022-01-12 00:04:08.028 +01:00 [INF] Executed endpoint 'MovieApi.Controllers.CategoryController.Post (MovieApi)'
+2022-01-12 00:04:08.029 +01:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/Category application/json 18 - 200 0 - 23.4477ms
+2022-01-12 00:04:10.548 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Category - -
+2022-01-12 00:04:10.550 +01:00 [INF] Executing endpoint 'MovieApi.Controllers.CategoryController.GetAll (MovieApi)'
+2022-01-12 00:04:10.551 +01:00 [INF] Route matched with {action = "GetAll", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[MovieApi.ViewModels.CategoryVm]] GetAll() on controller MovieApi.Controllers.CategoryController (MovieApi).
+2022-01-12 00:04:10.554 +01:00 [INF] Category GetAll called.
+2022-01-12 00:04:10.555 +01:00 [INF] Entity Framework Core 5.0.1 initialized 'MovieContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-01-12 00:04:10.559 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Category] AS [c]
+2022-01-12 00:04:10.562 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[MovieApi.ViewModels.CategoryVm, MovieApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-12 00:04:10.564 +01:00 [INF] Executed action MovieApi.Controllers.CategoryController.GetAll (MovieApi) in 10.986ms
+2022-01-12 00:04:10.566 +01:00 [INF] Executed endpoint 'MovieApi.Controllers.CategoryController.GetAll (MovieApi)'
+2022-01-12 00:04:10.567 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Category - - - 200 - application/json;+charset=utf-8 19.7369ms
+2022-01-12 00:04:26.407 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Movie - -
+2022-01-12 00:04:26.409 +01:00 [INF] Executing endpoint 'MovieApi.Controllers.MovieController.GetAll (MovieApi)'
+2022-01-12 00:04:26.414 +01:00 [INF] Route matched with {action = "GetAll", controller = "Movie"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[MovieApi.ViewModels.MovieRowVm]] GetAll(MovieApi.Filters.GenericQueryOption`1[MovieApi.Filters.MovieFilter]) on controller MovieApi.Controllers.MovieController (MovieApi).
+2022-01-12 00:04:26.422 +01:00 [INF] Movie GetAll called.
+2022-01-12 00:04:26.426 +01:00 [INF] Entity Framework Core 5.0.1 initialized 'MovieContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-01-12 00:04:26.489 +01:00 [INF] Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Length], [m].[Name], CASE
+    WHEN (
+        SELECT COUNT(*)
+        FROM [Rating] AS [r]
+        WHERE [m].[Id] = [r].[MovieId]) > @__p_0 THEN (
+        SELECT AVG(CAST([r0].[Value] AS float))
+        FROM [Rating] AS [r0]
+        WHERE [m].[Id] = [r0].[MovieId])
+    ELSE 0.0E0
+END AS [RatingAvg], [m].[Year]
+FROM [Movie] AS [m]
+ORDER BY (
+    SELECT AVG(CAST([r1].[Value] AS float))
+    FROM [Rating] AS [r1]
+    WHERE [m].[Id] = [r1].[MovieId]) DESC
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2022-01-12 00:04:26.495 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[MovieApi.ViewModels.MovieRowVm, MovieApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-12 00:04:26.500 +01:00 [INF] Executed action MovieApi.Controllers.MovieController.GetAll (MovieApi) in 83.5263ms
+2022-01-12 00:04:26.502 +01:00 [INF] Executed endpoint 'MovieApi.Controllers.MovieController.GetAll (MovieApi)'
+2022-01-12 00:04:26.503 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Movie - - - 200 - application/json;+charset=utf-8 96.7066ms
+2022-01-12 00:04:32.206 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Movie?Filter.NameTerm=Star - -
+2022-01-12 00:04:32.208 +01:00 [INF] Executing endpoint 'MovieApi.Controllers.MovieController.GetAll (MovieApi)'
+2022-01-12 00:04:32.210 +01:00 [INF] Route matched with {action = "GetAll", controller = "Movie"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[MovieApi.ViewModels.MovieRowVm]] GetAll(MovieApi.Filters.GenericQueryOption`1[MovieApi.Filters.MovieFilter]) on controller MovieApi.Controllers.MovieController (MovieApi).
+2022-01-12 00:04:32.215 +01:00 [INF] Movie GetAll called.
+2022-01-12 00:04:32.217 +01:00 [INF] Entity Framework Core 5.0.1 initialized 'MovieContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-01-12 00:04:32.237 +01:00 [INF] Executed DbCommand (7ms) [Parameters=[@__p_1='?' (DbType = Int32), @__option_Filter_NameTerm_0='?' (Size = 250), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Length], [m].[Name], CASE
+    WHEN (
+        SELECT COUNT(*)
+        FROM [Rating] AS [r]
+        WHERE [m].[Id] = [r].[MovieId]) > @__p_1 THEN (
+        SELECT AVG(CAST([r0].[Value] AS float))
+        FROM [Rating] AS [r0]
+        WHERE [m].[Id] = [r0].[MovieId])
+    ELSE 0.0E0
+END AS [RatingAvg], [m].[Year]
+FROM [Movie] AS [m]
+WHERE (@__option_Filter_NameTerm_0 LIKE N'') OR (CHARINDEX(@__option_Filter_NameTerm_0, [m].[Name]) > 0)
+ORDER BY (
+    SELECT AVG(CAST([r1].[Value] AS float))
+    FROM [Rating] AS [r1]
+    WHERE [m].[Id] = [r1].[MovieId]) DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2022-01-12 00:04:32.242 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[MovieApi.ViewModels.MovieRowVm, MovieApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-12 00:04:32.245 +01:00 [INF] Executed action MovieApi.Controllers.MovieController.GetAll (MovieApi) in 32.8323ms
+2022-01-12 00:04:32.247 +01:00 [INF] Executed endpoint 'MovieApi.Controllers.MovieController.GetAll (MovieApi)'
+2022-01-12 00:04:32.248 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Movie?Filter.NameTerm=Star - - - 200 - application/json;+charset=utf-8 42.5017ms
+2022-01-12 00:04:35.034 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Movie?Filter.NameTerm=Star&SortOrder=0 - -
+2022-01-12 00:04:35.037 +01:00 [INF] Executing endpoint 'MovieApi.Controllers.MovieController.GetAll (MovieApi)'
+2022-01-12 00:04:35.038 +01:00 [INF] Route matched with {action = "GetAll", controller = "Movie"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[MovieApi.ViewModels.MovieRowVm]] GetAll(MovieApi.Filters.GenericQueryOption`1[MovieApi.Filters.MovieFilter]) on controller MovieApi.Controllers.MovieController (MovieApi).
+2022-01-12 00:04:35.043 +01:00 [INF] Movie GetAll called.
+2022-01-12 00:04:35.044 +01:00 [INF] Entity Framework Core 5.0.1 initialized 'MovieContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-01-12 00:04:35.058 +01:00 [INF] Executed DbCommand (7ms) [Parameters=[@__p_1='?' (DbType = Int32), @__option_Filter_NameTerm_0='?' (Size = 250), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Length], [m].[Name], CASE
+    WHEN (
+        SELECT COUNT(*)
+        FROM [Rating] AS [r]
+        WHERE [m].[Id] = [r].[MovieId]) > @__p_1 THEN (
+        SELECT AVG(CAST([r0].[Value] AS float))
+        FROM [Rating] AS [r0]
+        WHERE [m].[Id] = [r0].[MovieId])
+    ELSE 0.0E0
+END AS [RatingAvg], [m].[Year]
+FROM [Movie] AS [m]
+WHERE (@__option_Filter_NameTerm_0 LIKE N'') OR (CHARINDEX(@__option_Filter_NameTerm_0, [m].[Name]) > 0)
+ORDER BY (
+    SELECT AVG(CAST([r1].[Value] AS float))
+    FROM [Rating] AS [r1]
+    WHERE [m].[Id] = [r1].[MovieId])
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2022-01-12 00:04:35.063 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[MovieApi.ViewModels.MovieRowVm, MovieApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-12 00:04:35.064 +01:00 [INF] Executed action MovieApi.Controllers.MovieController.GetAll (MovieApi) in 23.4845ms
+2022-01-12 00:04:35.066 +01:00 [INF] Executed endpoint 'MovieApi.Controllers.MovieController.GetAll (MovieApi)'
+2022-01-12 00:04:35.067 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Movie?Filter.NameTerm=Star&SortOrder=0 - - - 200 - application/json;+charset=utf-8 33.2363ms
+2022-01-12 00:04:38.387 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Movie?Filter.NameTerm=Star&SortOrder=1 - -
+2022-01-12 00:04:38.390 +01:00 [INF] Executing endpoint 'MovieApi.Controllers.MovieController.GetAll (MovieApi)'
+2022-01-12 00:04:38.391 +01:00 [INF] Route matched with {action = "GetAll", controller = "Movie"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[MovieApi.ViewModels.MovieRowVm]] GetAll(MovieApi.Filters.GenericQueryOption`1[MovieApi.Filters.MovieFilter]) on controller MovieApi.Controllers.MovieController (MovieApi).
+2022-01-12 00:04:38.394 +01:00 [INF] Movie GetAll called.
+2022-01-12 00:04:38.395 +01:00 [INF] Entity Framework Core 5.0.1 initialized 'MovieContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-01-12 00:04:38.402 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__option_Filter_NameTerm_0='?' (Size = 250), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Length], [m].[Name], CASE
+    WHEN (
+        SELECT COUNT(*)
+        FROM [Rating] AS [r]
+        WHERE [m].[Id] = [r].[MovieId]) > @__p_1 THEN (
+        SELECT AVG(CAST([r0].[Value] AS float))
+        FROM [Rating] AS [r0]
+        WHERE [m].[Id] = [r0].[MovieId])
+    ELSE 0.0E0
+END AS [RatingAvg], [m].[Year]
+FROM [Movie] AS [m]
+WHERE (@__option_Filter_NameTerm_0 LIKE N'') OR (CHARINDEX(@__option_Filter_NameTerm_0, [m].[Name]) > 0)
+ORDER BY (
+    SELECT AVG(CAST([r1].[Value] AS float))
+    FROM [Rating] AS [r1]
+    WHERE [m].[Id] = [r1].[MovieId]) DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2022-01-12 00:04:38.409 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[MovieApi.ViewModels.MovieRowVm, MovieApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-12 00:04:38.412 +01:00 [INF] Executed action MovieApi.Controllers.MovieController.GetAll (MovieApi) in 18.4531ms
+2022-01-12 00:04:38.414 +01:00 [INF] Executed endpoint 'MovieApi.Controllers.MovieController.GetAll (MovieApi)'
+2022-01-12 00:04:38.415 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Movie?Filter.NameTerm=Star&SortOrder=1 - - - 200 - application/json;+charset=utf-8 28.0058ms
+2022-01-12 00:04:41.627 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Movie?Filter.NameTerm=Star&SortOrder=0 - -
+2022-01-12 00:04:41.629 +01:00 [INF] Executing endpoint 'MovieApi.Controllers.MovieController.GetAll (MovieApi)'
+2022-01-12 00:04:41.630 +01:00 [INF] Route matched with {action = "GetAll", controller = "Movie"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[MovieApi.ViewModels.MovieRowVm]] GetAll(MovieApi.Filters.GenericQueryOption`1[MovieApi.Filters.MovieFilter]) on controller MovieApi.Controllers.MovieController (MovieApi).
+2022-01-12 00:04:41.633 +01:00 [INF] Movie GetAll called.
+2022-01-12 00:04:41.634 +01:00 [INF] Entity Framework Core 5.0.1 initialized 'MovieContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-01-12 00:04:41.639 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_1='?' (DbType = Int32), @__option_Filter_NameTerm_0='?' (Size = 250), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Length], [m].[Name], CASE
+    WHEN (
+        SELECT COUNT(*)
+        FROM [Rating] AS [r]
+        WHERE [m].[Id] = [r].[MovieId]) > @__p_1 THEN (
+        SELECT AVG(CAST([r0].[Value] AS float))
+        FROM [Rating] AS [r0]
+        WHERE [m].[Id] = [r0].[MovieId])
+    ELSE 0.0E0
+END AS [RatingAvg], [m].[Year]
+FROM [Movie] AS [m]
+WHERE (@__option_Filter_NameTerm_0 LIKE N'') OR (CHARINDEX(@__option_Filter_NameTerm_0, [m].[Name]) > 0)
+ORDER BY (
+    SELECT AVG(CAST([r1].[Value] AS float))
+    FROM [Rating] AS [r1]
+    WHERE [m].[Id] = [r1].[MovieId])
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2022-01-12 00:04:41.648 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[MovieApi.ViewModels.MovieRowVm, MovieApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-12 00:04:41.649 +01:00 [INF] Executed action MovieApi.Controllers.MovieController.GetAll (MovieApi) in 16.4662ms
+2022-01-12 00:04:41.652 +01:00 [INF] Executed endpoint 'MovieApi.Controllers.MovieController.GetAll (MovieApi)'
+2022-01-12 00:04:41.656 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Movie?Filter.NameTerm=Star&SortOrder=0 - - - 200 - application/json;+charset=utf-8 29.2633ms
+2022-01-12 00:04:44.173 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Movie?Filter.NameTerm=Star&SortOrder=1 - -
+2022-01-12 00:04:44.176 +01:00 [INF] Executing endpoint 'MovieApi.Controllers.MovieController.GetAll (MovieApi)'
+2022-01-12 00:04:44.177 +01:00 [INF] Route matched with {action = "GetAll", controller = "Movie"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[MovieApi.ViewModels.MovieRowVm]] GetAll(MovieApi.Filters.GenericQueryOption`1[MovieApi.Filters.MovieFilter]) on controller MovieApi.Controllers.MovieController (MovieApi).
+2022-01-12 00:04:44.180 +01:00 [INF] Movie GetAll called.
+2022-01-12 00:04:44.181 +01:00 [INF] Entity Framework Core 5.0.1 initialized 'MovieContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-01-12 00:04:44.185 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_1='?' (DbType = Int32), @__option_Filter_NameTerm_0='?' (Size = 250), @__p_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Length], [m].[Name], CASE
+    WHEN (
+        SELECT COUNT(*)
+        FROM [Rating] AS [r]
+        WHERE [m].[Id] = [r].[MovieId]) > @__p_1 THEN (
+        SELECT AVG(CAST([r0].[Value] AS float))
+        FROM [Rating] AS [r0]
+        WHERE [m].[Id] = [r0].[MovieId])
+    ELSE 0.0E0
+END AS [RatingAvg], [m].[Year]
+FROM [Movie] AS [m]
+WHERE (@__option_Filter_NameTerm_0 LIKE N'') OR (CHARINDEX(@__option_Filter_NameTerm_0, [m].[Name]) > 0)
+ORDER BY (
+    SELECT AVG(CAST([r1].[Value] AS float))
+    FROM [Rating] AS [r1]
+    WHERE [m].[Id] = [r1].[MovieId]) DESC
+OFFSET @__p_1 ROWS FETCH NEXT @__p_2 ROWS ONLY
+2022-01-12 00:04:44.191 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[MovieApi.ViewModels.MovieRowVm, MovieApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-12 00:04:44.193 +01:00 [INF] Executed action MovieApi.Controllers.MovieController.GetAll (MovieApi) in 13.546ms
+2022-01-12 00:04:44.195 +01:00 [INF] Executed endpoint 'MovieApi.Controllers.MovieController.GetAll (MovieApi)'
+2022-01-12 00:04:44.196 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Movie?Filter.NameTerm=Star&SortOrder=1 - - - 200 - application/json;+charset=utf-8 23.1360ms
+2022-01-12 00:04:53.893 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Movie - -
+2022-01-12 00:04:53.896 +01:00 [INF] Executing endpoint 'MovieApi.Controllers.MovieController.GetAll (MovieApi)'
+2022-01-12 00:04:53.897 +01:00 [INF] Route matched with {action = "GetAll", controller = "Movie"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[MovieApi.ViewModels.MovieRowVm]] GetAll(MovieApi.Filters.GenericQueryOption`1[MovieApi.Filters.MovieFilter]) on controller MovieApi.Controllers.MovieController (MovieApi).
+2022-01-12 00:04:53.900 +01:00 [INF] Movie GetAll called.
+2022-01-12 00:04:53.902 +01:00 [INF] Entity Framework Core 5.0.1 initialized 'MovieContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-01-12 00:04:53.907 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Length], [m].[Name], CASE
+    WHEN (
+        SELECT COUNT(*)
+        FROM [Rating] AS [r]
+        WHERE [m].[Id] = [r].[MovieId]) > @__p_0 THEN (
+        SELECT AVG(CAST([r0].[Value] AS float))
+        FROM [Rating] AS [r0]
+        WHERE [m].[Id] = [r0].[MovieId])
+    ELSE 0.0E0
+END AS [RatingAvg], [m].[Year]
+FROM [Movie] AS [m]
+ORDER BY (
+    SELECT AVG(CAST([r1].[Value] AS float))
+    FROM [Rating] AS [r1]
+    WHERE [m].[Id] = [r1].[MovieId]) DESC
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2022-01-12 00:04:53.912 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[MovieApi.ViewModels.MovieRowVm, MovieApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-12 00:04:53.914 +01:00 [INF] Executed action MovieApi.Controllers.MovieController.GetAll (MovieApi) in 13.8694ms
+2022-01-12 00:04:53.915 +01:00 [INF] Executed endpoint 'MovieApi.Controllers.MovieController.GetAll (MovieApi)'
+2022-01-12 00:04:53.917 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Movie - - - 200 - application/json;+charset=utf-8 23.4493ms
+2022-01-12 00:05:12.883 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Movie?SortOrder=0 - -
+2022-01-12 00:05:12.886 +01:00 [INF] Executing endpoint 'MovieApi.Controllers.MovieController.GetAll (MovieApi)'
+2022-01-12 00:05:12.888 +01:00 [INF] Route matched with {action = "GetAll", controller = "Movie"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[MovieApi.ViewModels.MovieRowVm]] GetAll(MovieApi.Filters.GenericQueryOption`1[MovieApi.Filters.MovieFilter]) on controller MovieApi.Controllers.MovieController (MovieApi).
+2022-01-12 00:05:12.891 +01:00 [INF] Movie GetAll called.
+2022-01-12 00:05:12.893 +01:00 [INF] Entity Framework Core 5.0.1 initialized 'MovieContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-01-12 00:05:12.913 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Length], [m].[Name], CASE
+    WHEN (
+        SELECT COUNT(*)
+        FROM [Rating] AS [r]
+        WHERE [m].[Id] = [r].[MovieId]) > @__p_0 THEN (
+        SELECT AVG(CAST([r0].[Value] AS float))
+        FROM [Rating] AS [r0]
+        WHERE [m].[Id] = [r0].[MovieId])
+    ELSE 0.0E0
+END AS [RatingAvg], [m].[Year]
+FROM [Movie] AS [m]
+ORDER BY (
+    SELECT AVG(CAST([r1].[Value] AS float))
+    FROM [Rating] AS [r1]
+    WHERE [m].[Id] = [r1].[MovieId])
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2022-01-12 00:05:12.919 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[MovieApi.ViewModels.MovieRowVm, MovieApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-12 00:05:12.921 +01:00 [INF] Executed action MovieApi.Controllers.MovieController.GetAll (MovieApi) in 30.2744ms
+2022-01-12 00:05:12.923 +01:00 [INF] Executed endpoint 'MovieApi.Controllers.MovieController.GetAll (MovieApi)'
+2022-01-12 00:05:12.924 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Movie?SortOrder=0 - - - 200 - application/json;+charset=utf-8 41.9788ms
+2022-01-12 00:05:14.936 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Movie?SortOrder=1 - -
+2022-01-12 00:05:14.938 +01:00 [INF] Executing endpoint 'MovieApi.Controllers.MovieController.GetAll (MovieApi)'
+2022-01-12 00:05:14.939 +01:00 [INF] Route matched with {action = "GetAll", controller = "Movie"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[MovieApi.ViewModels.MovieRowVm]] GetAll(MovieApi.Filters.GenericQueryOption`1[MovieApi.Filters.MovieFilter]) on controller MovieApi.Controllers.MovieController (MovieApi).
+2022-01-12 00:05:14.942 +01:00 [INF] Movie GetAll called.
+2022-01-12 00:05:14.943 +01:00 [INF] Entity Framework Core 5.0.1 initialized 'MovieContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-01-12 00:05:14.951 +01:00 [INF] Executed DbCommand (7ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Length], [m].[Name], CASE
+    WHEN (
+        SELECT COUNT(*)
+        FROM [Rating] AS [r]
+        WHERE [m].[Id] = [r].[MovieId]) > @__p_0 THEN (
+        SELECT AVG(CAST([r0].[Value] AS float))
+        FROM [Rating] AS [r0]
+        WHERE [m].[Id] = [r0].[MovieId])
+    ELSE 0.0E0
+END AS [RatingAvg], [m].[Year]
+FROM [Movie] AS [m]
+ORDER BY (
+    SELECT AVG(CAST([r1].[Value] AS float))
+    FROM [Rating] AS [r1]
+    WHERE [m].[Id] = [r1].[MovieId]) DESC
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2022-01-12 00:05:14.958 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[MovieApi.ViewModels.MovieRowVm, MovieApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-12 00:05:14.959 +01:00 [INF] Executed action MovieApi.Controllers.MovieController.GetAll (MovieApi) in 17.7111ms
+2022-01-12 00:05:14.961 +01:00 [INF] Executed endpoint 'MovieApi.Controllers.MovieController.GetAll (MovieApi)'
+2022-01-12 00:05:14.963 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Movie?SortOrder=1 - - - 200 - application/json;+charset=utf-8 27.0946ms
+2022-01-12 00:05:27.074 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Category/movie/2 - -
+2022-01-12 00:05:27.083 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.AspNetCore.Routing.Matching.AmbiguousMatchException: The request matched multiple endpoints. Matches: 
+
+MovieApi.Controllers.CategoryController.GetAllByCategoryId (MovieApi)
+MovieApi.Controllers.CategoryController.GetAllByMovieId (MovieApi)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ReportAmbiguity(CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.ProcessFinalCandidates(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DefaultEndpointSelector.Select(HttpContext httpContext, CandidateState[] candidateState)
+   at Microsoft.AspNetCore.Routing.Matching.DfaMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.Matching.DataSourceDependentMatcher.MatchAsync(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-01-12 00:05:27.120 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Category/movie/2 - - - 500 - text/plain 45.6984ms
+2022-01-12 00:06:15.180 +01:00 [INF] Now listening on: https://localhost:5001
+2022-01-12 00:06:15.214 +01:00 [INF] Now listening on: http://localhost:5000
+2022-01-12 00:06:15.214 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-12 00:06:15.214 +01:00 [INF] Hosting environment: Development
+2022-01-12 00:06:15.214 +01:00 [INF] Content root path: C:\Users\Feczkó Botond\source\repos\MovieApi\MovieApi
+2022-01-12 00:06:16.238 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2022-01-12 00:06:16.360 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 124.5477ms
+2022-01-12 00:06:16.540 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2022-01-12 00:06:16.631 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 90.3691ms
+2022-01-12 00:06:20.699 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Movie - -
+2022-01-12 00:06:20.731 +01:00 [INF] Executing endpoint 'MovieApi.Controllers.MovieController.GetAll (MovieApi)'
+2022-01-12 00:06:20.762 +01:00 [INF] Route matched with {action = "GetAll", controller = "Movie"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[MovieApi.ViewModels.MovieRowVm]] GetAll(MovieApi.Filters.GenericQueryOption`1[MovieApi.Filters.MovieFilter]) on controller MovieApi.Controllers.MovieController (MovieApi).
+2022-01-12 00:06:21.033 +01:00 [INF] Movie GetAll called.
+2022-01-12 00:06:21.638 +01:00 [INF] Entity Framework Core 5.0.1 initialized 'MovieContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-01-12 00:06:22.261 +01:00 [INF] Executed DbCommand (45ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Length], [m].[Name], CASE
+    WHEN (
+        SELECT COUNT(*)
+        FROM [Rating] AS [r]
+        WHERE [m].[Id] = [r].[MovieId]) > @__p_0 THEN (
+        SELECT AVG(CAST([r0].[Value] AS float))
+        FROM [Rating] AS [r0]
+        WHERE [m].[Id] = [r0].[MovieId])
+    ELSE 0.0E0
+END AS [RatingAvg], [m].[Year]
+FROM [Movie] AS [m]
+ORDER BY (
+    SELECT AVG(CAST([r1].[Value] AS float))
+    FROM [Rating] AS [r1]
+    WHERE [m].[Id] = [r1].[MovieId]) DESC
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2022-01-12 00:06:22.298 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[MovieApi.ViewModels.MovieRowVm, MovieApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-12 00:06:22.314 +01:00 [INF] Executed action MovieApi.Controllers.MovieController.GetAll (MovieApi) in 1545.3974ms
+2022-01-12 00:06:22.316 +01:00 [INF] Executed endpoint 'MovieApi.Controllers.MovieController.GetAll (MovieApi)'
+2022-01-12 00:06:22.322 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Movie - - - 200 - application/json;+charset=utf-8 1622.9632ms
+2022-01-12 00:06:29.963 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Category/categories/2 - -
+2022-01-12 00:06:29.970 +01:00 [INF] Executing endpoint 'MovieApi.Controllers.CategoryController.GetAllByMovieId (MovieApi)'
+2022-01-12 00:06:29.973 +01:00 [INF] Route matched with {action = "GetAllByMovieId", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllByMovieId(Int32) on controller MovieApi.Controllers.CategoryController (MovieApi).
+2022-01-12 00:06:29.978 +01:00 [INF] Category GetAllByMovieId called.
+2022-01-12 00:06:30.002 +01:00 [INF] Entity Framework Core 5.0.1 initialized 'MovieContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-01-12 00:06:30.034 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [m].[Id], [m].[Description], [m].[Length], [m].[Name], [m].[Year]
+FROM [Movie] AS [m]
+WHERE [m].[Id] = @__p_0
+2022-01-12 00:06:30.074 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__movieId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Name]
+FROM [Category] AS [c]
+WHERE EXISTS (
+    SELECT 1
+    FROM [CategoryMovie] AS [c0]
+    WHERE ([c].[Id] = [c0].[CategoryId]) AND ([c0].[MovieId] = @__movieId_0))
+2022-01-12 00:06:30.079 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[MovieApi.ViewModels.CategoryVm, MovieApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-12 00:06:30.081 +01:00 [INF] Executed action MovieApi.Controllers.CategoryController.GetAllByMovieId (MovieApi) in 105.8454ms
+2022-01-12 00:06:30.083 +01:00 [INF] Executed endpoint 'MovieApi.Controllers.CategoryController.GetAllByMovieId (MovieApi)'
+2022-01-12 00:06:30.085 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Category/categories/2 - - - 200 - application/json;+charset=utf-8 122.5091ms
+2022-01-12 00:06:35.964 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Category/movies/1 - -
+2022-01-12 00:06:35.967 +01:00 [INF] Executing endpoint 'MovieApi.Controllers.CategoryController.GetAllByCategoryId (MovieApi)'
+2022-01-12 00:06:35.971 +01:00 [INF] Route matched with {action = "GetAllByCategoryId", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllByCategoryId(Int32) on controller MovieApi.Controllers.CategoryController (MovieApi).
+2022-01-12 00:06:35.973 +01:00 [INF] Category GetAllByCategoryId called.
+2022-01-12 00:06:35.981 +01:00 [INF] Entity Framework Core 5.0.1 initialized 'MovieContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-01-12 00:06:35.989 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Name]
+FROM [Category] AS [c]
+WHERE [c].[Id] = @__p_0
+2022-01-12 00:06:36.003 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__categoryId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Description], [m].[Id], [m].[Length], [m].[Name], CASE
+    WHEN (
+        SELECT COUNT(*)
+        FROM [Rating] AS [r]
+        WHERE [m].[Id] = [r].[MovieId]) > 0 THEN (
+        SELECT AVG(CAST([r0].[Value] AS float))
+        FROM [Rating] AS [r0]
+        WHERE [m].[Id] = [r0].[MovieId])
+    ELSE 0.0E0
+END AS [RatingAvg], [m].[Year]
+FROM [Movie] AS [m]
+WHERE EXISTS (
+    SELECT 1
+    FROM [CategoryMovie] AS [c]
+    WHERE ([m].[Id] = [c].[MovieId]) AND ([c].[CategoryId] = @__categoryId_0))
+2022-01-12 00:06:36.011 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[MovieApi.ViewModels.MovieVm, MovieApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-12 00:06:36.014 +01:00 [INF] Executed action MovieApi.Controllers.CategoryController.GetAllByCategoryId (MovieApi) in 41.7042ms
+2022-01-12 00:06:36.017 +01:00 [INF] Executed endpoint 'MovieApi.Controllers.CategoryController.GetAllByCategoryId (MovieApi)'
+2022-01-12 00:06:36.019 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Category/movies/1 - - - 200 - application/json;+charset=utf-8 55.8358ms
+2022-01-12 00:06:46.727 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Movie/1 - -
+2022-01-12 00:06:46.729 +01:00 [INF] Executing endpoint 'MovieApi.Controllers.MovieController.Get (MovieApi)'
+2022-01-12 00:06:46.734 +01:00 [INF] Route matched with {action = "Get", controller = "Movie"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller MovieApi.Controllers.MovieController (MovieApi).
+2022-01-12 00:06:46.737 +01:00 [INF] Movie Get called.
+2022-01-12 00:06:46.740 +01:00 [INF] Entity Framework Core 5.0.1 initialized 'MovieContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-01-12 00:06:46.756 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [m].[Description], [m].[Id], [m].[Length], [m].[Name], CASE
+    WHEN (
+        SELECT COUNT(*)
+        FROM [Rating] AS [r]
+        WHERE [m].[Id] = [r].[MovieId]) > 0 THEN (
+        SELECT AVG(CAST([r0].[Value] AS float))
+        FROM [Rating] AS [r0]
+        WHERE [m].[Id] = [r0].[MovieId])
+    ELSE 0.0E0
+END AS [RatingAvg], [m].[Year]
+FROM [Movie] AS [m]
+WHERE [m].[Id] = @__id_0
+2022-01-12 00:06:46.760 +01:00 [INF] Executing OkObjectResult, writing value of type 'MovieApi.ViewModels.MovieVm'.
+2022-01-12 00:06:46.762 +01:00 [INF] Executed action MovieApi.Controllers.MovieController.Get (MovieApi) in 25.4269ms
+2022-01-12 00:06:46.763 +01:00 [INF] Executed endpoint 'MovieApi.Controllers.MovieController.Get (MovieApi)'
+2022-01-12 00:06:46.765 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Movie/1 - - - 200 - application/json;+charset=utf-8 38.3642ms
+2022-01-12 00:12:18.992 +01:00 [INF] Now listening on: https://localhost:5001
+2022-01-12 00:12:19.030 +01:00 [INF] Now listening on: http://localhost:5000
+2022-01-12 00:12:19.031 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-12 00:12:19.031 +01:00 [INF] Hosting environment: Development
+2022-01-12 00:12:19.031 +01:00 [INF] Content root path: C:\Users\Feczkó Botond\source\repos\MovieApi\MovieApi
+2022-01-12 00:12:20.132 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2022-01-12 00:12:20.261 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 131.0059ms
+2022-01-12 00:12:20.426 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2022-01-12 00:12:20.518 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 91.6178ms
+2022-01-12 00:12:24.687 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Movie - -
+2022-01-12 00:12:24.722 +01:00 [INF] Executing endpoint 'MovieApi.Controllers.MovieController.GetAll (MovieApi)'
+2022-01-12 00:12:24.757 +01:00 [INF] Route matched with {action = "GetAll", controller = "Movie"}. Executing controller action with signature System.Threading.Tasks.Task`1[System.Collections.Generic.IEnumerable`1[MovieApi.ViewModels.MovieRowVm]] GetAll(MovieApi.Filters.GenericQueryOption`1[MovieApi.Filters.MovieFilter]) on controller MovieApi.Controllers.MovieController (MovieApi).
+2022-01-12 00:12:25.029 +01:00 [INF] Movie GetAll called.
+2022-01-12 00:12:25.603 +01:00 [INF] Entity Framework Core 5.0.1 initialized 'MovieContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-01-12 00:12:26.217 +01:00 [INF] Executed DbCommand (46ms) [Parameters=[@__p_0='?' (DbType = Int32), @__p_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [m].[Id], [m].[Length], [m].[Name], CASE
+    WHEN (
+        SELECT COUNT(*)
+        FROM [Rating] AS [r]
+        WHERE [m].[Id] = [r].[MovieId]) > @__p_0 THEN (
+        SELECT AVG(CAST([r0].[Value] AS float))
+        FROM [Rating] AS [r0]
+        WHERE [m].[Id] = [r0].[MovieId])
+    ELSE 0.0E0
+END AS [RatingAvg], [m].[Year]
+FROM [Movie] AS [m]
+ORDER BY (
+    SELECT AVG(CAST([r1].[Value] AS float))
+    FROM [Rating] AS [r1]
+    WHERE [m].[Id] = [r1].[MovieId]) DESC
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+2022-01-12 00:12:26.255 +01:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[MovieApi.ViewModels.MovieRowVm, MovieApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-01-12 00:12:26.272 +01:00 [INF] Executed action MovieApi.Controllers.MovieController.GetAll (MovieApi) in 1506.3506ms
+2022-01-12 00:12:26.274 +01:00 [INF] Executed endpoint 'MovieApi.Controllers.MovieController.GetAll (MovieApi)'
+2022-01-12 00:12:26.280 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Movie - - - 200 - application/json;+charset=utf-8 1593.1345ms
+2022-01-12 00:12:30.812 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Movie/1 - -
+2022-01-12 00:12:30.818 +01:00 [INF] Executing endpoint 'MovieApi.Controllers.MovieController.Get (MovieApi)'
+2022-01-12 00:12:30.822 +01:00 [INF] Route matched with {action = "Get", controller = "Movie"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32) on controller MovieApi.Controllers.MovieController (MovieApi).
+2022-01-12 00:12:30.828 +01:00 [INF] Movie Get called.
+2022-01-12 00:12:30.851 +01:00 [INF] Entity Framework Core 5.0.1 initialized 'MovieContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2022-01-12 00:12:30.874 +01:00 [INF] Executed DbCommand (7ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [m].[Description], [m].[Id], [m].[Length], [m].[Name], CASE
+    WHEN (
+        SELECT COUNT(*)
+        FROM [Rating] AS [r]
+        WHERE [m].[Id] = [r].[MovieId]) > 0 THEN (
+        SELECT AVG(CAST([r0].[Value] AS float))
+        FROM [Rating] AS [r0]
+        WHERE [m].[Id] = [r0].[MovieId])
+    ELSE 0.0E0
+END AS [RatingAvg], [m].[Year]
+FROM [Movie] AS [m]
+WHERE [m].[Id] = @__id_0
+2022-01-12 00:12:30.883 +01:00 [INF] Executing OkObjectResult, writing value of type 'MovieApi.ViewModels.MovieVm'.
+2022-01-12 00:12:30.886 +01:00 [INF] Executed action MovieApi.Controllers.MovieController.Get (MovieApi) in 60.5938ms
+2022-01-12 00:12:30.888 +01:00 [INF] Executed endpoint 'MovieApi.Controllers.MovieController.Get (MovieApi)'
+2022-01-12 00:12:30.890 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Movie/1 - - - 200 - application/json;+charset=utf-8 77.8401ms
+2022-01-12 00:12:40.951 +01:00 [INF] Application is shutting down...
+2022-01-12 00:12:47.300 +01:00 [INF] Now listening on: https://localhost:5001
+2022-01-12 00:12:47.349 +01:00 [INF] Now listening on: http://localhost:5000
+2022-01-12 00:12:47.350 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-01-12 00:12:47.350 +01:00 [INF] Hosting environment: Development
+2022-01-12 00:12:47.350 +01:00 [INF] Content root path: C:\Users\Feczkó Botond\source\repos\MovieApi\MovieApi
+2022-01-12 00:12:48.576 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - -
+2022-01-12 00:12:48.707 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - - - 200 - text/html;charset=utf-8 132.6085ms
+2022-01-12 00:12:48.887 +01:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - -
+2022-01-12 00:12:48.978 +01:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 91.7956ms
