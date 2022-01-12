@@ -9,6 +9,8 @@ using MovieApi.Dtos;
 using MovieApi.ViewModels;
 using Microsoft.Extensions.Logging;
 using MovieApi.Filters;
+using Microsoft.AspNetCore.Authorization;
+using MovieApi.Models.Authentication;
 
 namespace MovieApi.Controllers
 {
@@ -28,6 +30,7 @@ namespace MovieApi.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = UserRoles.Admin)]
         public async Task<IActionResult> Post([FromBody] NewMovieDto m)
         {
             _logger.LogInformation("Movie Post called.");
@@ -36,6 +39,7 @@ namespace MovieApi.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = UserRoles.Admin)]
         public async Task<IActionResult> Delete(int id)
         {
             _logger.LogInformation("Movie Delete called.");
@@ -63,6 +67,7 @@ namespace MovieApi.Controllers
         }
 
         [HttpPut("{id}")]
+        [Authorize(Roles = UserRoles.Admin)]
         public async Task<IActionResult> Put(int id, [FromBody] UpdateMovieDto m)
         {
             _logger.LogInformation("Movie Put called.");

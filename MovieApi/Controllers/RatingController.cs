@@ -10,6 +10,8 @@ using MovieApi.ViewModels;
 using Microsoft.Extensions.Logging;
 using System.Net;
 using System.Net.Http;
+using Microsoft.AspNetCore.Authorization;
+using MovieApi.Models.Authentication;
 
 namespace MovieApi.Controllers
 {
@@ -27,6 +29,7 @@ namespace MovieApi.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = UserRoles.User)]
         public async Task<IActionResult> Post([FromBody] NewRatingDto r)
         {
             _logger.LogInformation("Rating Post called.");
@@ -38,6 +41,7 @@ namespace MovieApi.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = UserRoles.User)]
         public async Task<IActionResult> Delete(int id)
         {
             _logger.LogInformation("Rating Delete called.");
@@ -69,6 +73,7 @@ namespace MovieApi.Controllers
         }
 
         [HttpPut("{id}")]
+        [Authorize(Roles = UserRoles.User)]
         public async Task<IActionResult> Put(int id, [FromBody] UpdateRatingDto r)
         {
             _logger.LogInformation("Rating Put called.");

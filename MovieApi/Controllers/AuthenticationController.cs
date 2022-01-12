@@ -19,6 +19,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using MovieApi.ViewModels.Authentication;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authorization;
 
 namespace MovieApi.Controllers
 {
@@ -96,6 +97,27 @@ namespace MovieApi.Controllers
             var result = await _userManager.CreateAsync(newUser, registerDto.Password);
             if (!result.Succeeded)
                 throw new HttpResponseException("Something is wrong during user creation.", StatusCodes.Status500InternalServerError);
+
+            return Ok();
+        }
+
+        [HttpPut("addRole")]
+        [Authorize(Roles = UserRoles.Admin)]
+        public async Task<IActionResult> AddRole([FromQuery] string userName, [FromQuery] string roleName)
+        {
+            var existingUser = await _userManager.FindByNameAsync(userName);
+            if (existingUser == null)
+            {
+                throw new HttpResponseException("User does not exist.", StatusCodes.Status404NotFound);
+            }
+
+            if(roleName != UserRoles.Admin && roleName != UserRoles.User)
+                throw new HttpResponseException("The specified role does not exist.", StatusCodes.Status404NotFound);
+
+            var result = await _userManager.AddToRoleAsync(existingUser, roleName);
+
+            if (!result.Succeeded)
+                throw new HttpResponseException("Something is wrong during role assignment.", StatusCodes.Status500InternalServerError);
 
             return Ok();
         }

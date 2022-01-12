@@ -8,7 +8,8 @@ using MovieApi.Services;
 using MovieApi.Dtos;
 using MovieApi.ViewModels;
 using Microsoft.Extensions.Logging;
-
+using Microsoft.AspNetCore.Authorization;
+using MovieApi.Models.Authentication;
 
 namespace MovieApi.Controllers
 {
@@ -27,6 +28,7 @@ namespace MovieApi.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = UserRoles.Admin)]
         public async Task<IActionResult> Post([FromBody] NewCategoryDto c)
         {
             _logger.LogInformation("Category Post called.");
@@ -38,6 +40,7 @@ namespace MovieApi.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = UserRoles.Admin)]
         public async Task<IActionResult> Delete(int id)
         {
             _logger.LogInformation("Category Delete called.");
@@ -76,6 +79,7 @@ namespace MovieApi.Controllers
         }
 
         [HttpPut]
+        [Authorize(Roles = UserRoles.Admin)]
         public async Task<bool> AddMovieToCategory(int movieId, int categoryId)
         {
             _logger.LogInformation("Category AddMovieToCategory called.");

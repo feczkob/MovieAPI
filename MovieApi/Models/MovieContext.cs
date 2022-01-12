@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using MovieApi.Models.Authentication;
@@ -61,7 +62,6 @@ namespace MovieApi.Models
                 new CategoryMovie { CategoryId = 2, MovieId = 2 },
                 new CategoryMovie { CategoryId = 3, MovieId = 1 },
                 new CategoryMovie { CategoryId = 4, MovieId = 2 });
-
         }
 
         public DbSet<Movie> Movies { get; set; }

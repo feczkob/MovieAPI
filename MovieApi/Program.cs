@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Serilog;
 using Serilog.Formatting.Compact;
+using MovieApi.Extensions;
 
 namespace MovieApi
 {
@@ -20,7 +21,10 @@ namespace MovieApi
                 .WriteTo.File("logs.txt", rollingInterval: RollingInterval.Day)
                 .CreateLogger();
 
-            CreateHostBuilder(args).Build().Run();
+            CreateHostBuilder(args)
+                .Build()
+                .Seed()
+                .Run();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
