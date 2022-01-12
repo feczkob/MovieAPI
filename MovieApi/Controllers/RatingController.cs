@@ -15,7 +15,7 @@ namespace MovieApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class RatingController : Controller
+    public class RatingController : ControllerBase
     {
         private readonly RatingService _ratingService;
         private readonly ILogger<RatingController> _logger;

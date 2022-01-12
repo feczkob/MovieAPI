@@ -65,6 +65,11 @@ namespace MovieApi.Controllers
     {
         public HttpResponseException(string message) : base(message) { }
 
+        public HttpResponseException(string message, int status) : base(message) 
+        {
+            Status = status;
+        }
+
         public int Status { get; set; } = 500;
     }
 }

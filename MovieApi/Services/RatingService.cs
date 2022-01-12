@@ -69,7 +69,7 @@ namespace MovieApi.Services
                 .ToListAsync();
         }
 
-        // kell ez?
+        // error when trying to modify rating's movieId
         public async Task<bool> UpdateRating(int id, UpdateRatingDto r)
         {
             var _r = _mapper.Map<Rating>(r);

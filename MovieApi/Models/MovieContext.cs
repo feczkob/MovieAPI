@@ -2,17 +2,21 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using MovieApi.Models.Authentication;
 
 namespace MovieApi.Models
 {
-    public class MovieContext : DbContext
+    public class MovieContext : IdentityDbContext<ApplicationUser>
     {
         public MovieContext(DbContextOptions<MovieContext> options) : base(options)
         { }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+
             // Fluent API
             modelBuilder.Entity<Rating>()
                 .HasOne(r => r.Movie)
