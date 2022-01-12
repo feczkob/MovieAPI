@@ -75,7 +75,6 @@ namespace MovieApi.Services
             var _r = _mapper.Map<Rating>(r);
             _r.Id = id;
 
-            // hiba
             _context.Entry(_r).State = EntityState.Modified;
             var n = await _context.SaveChangesAsync();
 

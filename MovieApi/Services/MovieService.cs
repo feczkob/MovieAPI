@@ -26,12 +26,12 @@ namespace MovieApi.Services
             _mapper = mapper;
         }
 
-        public async Task<MovieVm> CreateMovie(NewMovieDto m)
+        public async Task<MovieRowVm> CreateMovie(NewMovieDto m)
         {
             var _m = _mapper.Map<Movie>(m);
             _context.Movies.Add(_m);
             await _context.SaveChangesAsync();
-            return _mapper.Map<MovieVm>(_m);
+            return _mapper.Map<MovieRowVm>(_m);
         }
 
         public async Task<bool> DeleteMovie(int id)
@@ -82,6 +82,16 @@ namespace MovieApi.Services
                     Length = x.Length,
                     Year = x.Year,
                     RatingAvg = x.Ratings.Count > 0 ? x.Ratings.Average(r => r.Value) : 0,
+                    Ratings = _context.Ratings
+                        .Where(y => y.MovieId == x.Id)
+                        .Select(y => new RatingVm
+                        {
+                            Id = y.Id,
+                            Value = y.Value,
+                            Description = y.Description,
+                            MovieId = y.MovieId
+                        })
+                        .ToList(),
                     Categories = _context.Categories
                         .Where(y => y.CategoryMovies.Any(cm => cm.MovieId == x.Id))
                         .Select(y => new CategoryVm

@@ -11,7 +11,7 @@ namespace MovieApi.Services
 {
     public interface IMovieService
     {
-        Task<MovieVm> CreateMovie(NewMovieDto m);
+        Task<MovieRowVm> CreateMovie(NewMovieDto m);
         Task<bool> DeleteMovie(int id);
         Task<List<MovieRowVm>> GetAll(GenericQueryOption<MovieFilter> option);
         Task<MovieVm> GetMovieById(int id);

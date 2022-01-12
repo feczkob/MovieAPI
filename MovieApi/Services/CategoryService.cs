@@ -80,7 +80,7 @@ namespace MovieApi.Services
                 .ToListAsync();
         }
 
-        public async Task<List<MovieVm>> GetAllByCategoryId(int categoryId)
+        public async Task<List<MovieRowVm>> GetAllByCategoryId(int categoryId)
         {
             var category = await _context.Categories.FindAsync(categoryId);
             if (category == null)
@@ -88,7 +88,7 @@ namespace MovieApi.Services
 
             return await _context.Movies
                 .Where(x => x.CategoryMovies.Any(cm => cm.CategoryId == categoryId))
-                .ProjectTo<MovieVm>(_mapper.ConfigurationProvider)
+                .ProjectTo<MovieRowVm>(_mapper.ConfigurationProvider)
                 .ToListAsync();
         }
     }
