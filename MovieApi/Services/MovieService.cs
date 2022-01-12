@@ -74,7 +74,24 @@ namespace MovieApi.Services
                 .Include(x => x.Ratings)
                 .Include(x => x.CategoryMovies)
                 .Where(x => x.Id == id)
-                .ProjectTo<MovieVm>(_mapper.ConfigurationProvider)
+                .Select(x => new MovieVm
+                {
+                    Id = x.Id,
+                    Name = x.Name,
+                    Description = x.Description,
+                    Length = x.Length,
+                    Year = x.Year,
+                    RatingAvg = x.Ratings.Count > 0 ? x.Ratings.Average(r => r.Value) : 0,
+                    Categories = _context.Categories
+                        .Where(y => y.CategoryMovies.Any(cm => cm.MovieId == x.Id))
+                        .Select(y => new CategoryVm
+                        {
+                            Id = y.Id,
+                            Name = y.Name
+                        })
+                        //.ProjectTo<CategoryVm>(_mapper.ConfigurationProvider)
+                        .ToList()})
+                //.ProjectTo<MovieVm>(_mapper.ConfigurationProvider)
                 .SingleOrDefaultAsync();
         }
 

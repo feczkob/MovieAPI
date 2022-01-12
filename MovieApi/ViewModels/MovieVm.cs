@@ -19,6 +19,6 @@ namespace MovieApi.ViewModels
         public int Year { get; set; }
         [Range(0,10)]
         public double RatingAvg { get; set; }
-        //public virtual ICollection<CategoryVm> Categories { get; set; }
+        public virtual List<CategoryVm> Categories { get; set; }
     }
 }
